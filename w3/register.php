@@ -70,7 +70,6 @@
         const maxDate = `${year}-${month}-${day}`;
         
         document.getElementById('dob').max = maxDate; 
-        console.log("Max date set to: " + maxDate);
     }
 
     window.onload = setMaxDate;
