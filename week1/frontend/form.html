@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form demo</title>
+    <style>
+        input:focus {
+            background-color: rgb(122, 204, 122);
+            color: white;
+        }
+        label{
+            display: inline-block;
+            right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#">
+        <fieldset>
+            <legend>
+                <h1>Login form</h1>
+            </legend>
+            <input type="text" name="username" required placeholder="Enter your username">
+            <br><br>
+            <input type="password" name="" required placeholder="Enter your password" id="">
+            <input type="submit" value="login">
+        </fieldset>
+
+    </form>
+    <br><br>
+    <form action="">
+        <fieldset>
+            <legend>
+                <h1>Buy a student</h1>
+            </legend>
+
+            <label for="">Student Name</label>
+            <input type="text" name="username" required placeholder="Enter your username">
+
+            <br><br>
+            <label for="">Student ID</label>
+            <input type="text" name="" required placeholder="Enter your password" id="">
+
+            <br><br>
+            <label for="">Student Email</label>
+            <input type="text" name="" required placeholder="Enter your password" id="">
+
+            <br><br>
+            <label for="">Student Gender</label>
+            <input type="radio" name="Gender" value="Male"> Male
+            <input type="radio" name="Gender" value="Female"> Female
+
+            <br><br>
+            <label for="">Student birthday</label>
+            <input type="date" name="" required id="">
+
+            <br><br>
+            <label for="">Choose Shop:</label>
+            <select name="" id="">
+                <option value="Ha Noi">Ha Noi</option>
+                <option value="Hai Phong">Hai Phong</option>
+                <option value="Hai Duong">Hai Duong</option>
+                <option value="Sai Gon">Sai Gon</option>
+                <option value="Da Nang">Da Nang</option>
+            </select>
+
+            <br><br>
+            <label for="">Extra Topping<br></label>
+            <input type="checkbox" name="Strength" id="">Confidence<br></input>
+            <input type="checkbox" name="Strength" id="">Handsome<br></input>
+            <input type="checkbox" name="Strength" id="">Pretty<br></input>
+            <input type="checkbox" name="Strength" id="">Friendly<br></input>
+            <input type="checkbox" name="Strength" id="">Coding Skill<br></input>
+
+            <br><br>
+            <label for="">Student Overview</label><br>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <br><br>
+            <input type="submit" value="Add to cart">
+        </fieldset>
+    </form>
+</body>
+
+</html>
