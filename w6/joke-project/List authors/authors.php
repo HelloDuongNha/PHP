@@ -1,5 +1,5 @@
 <?php
-$title = "Joke List";
+$title = "author List";
 ob_start();
 
 //connect to DB

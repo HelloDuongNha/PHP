@@ -12,8 +12,8 @@ if (isset($_POST['edit'])) {
    $email = $_POST['email'];
 
    $sql = "UPDATE authors
-         SET author_name = :name,
-             author_email = :email
+         SET   author_name = :name,
+               author_email = :email
          WHERE author_id = :id";
    $statement = $pdo->prepare($sql);
    $statement->bindValue(":id", $_POST['id']);
