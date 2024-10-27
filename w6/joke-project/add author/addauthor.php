@@ -2,7 +2,7 @@
 $title = "Add new author";
 
 //connect to db
-require 'includes/DatabaseConnection.php';
+require '../includes/DatabaseConnection.php';
 
 //check whether user submits form or not
 /* case 1: user already submitted form => take
@@ -12,8 +12,8 @@ if (isset($_POST['add'])) {
    $email = $_POST['email'];
 
    $sql = "INSERT INTO authors
-         SET author_name = :name,
-             author_email = :email";
+         SET   author_name = :name,
+               author_email = :email";
    $statement = $pdo->prepare($sql);
    $statement->bindValue(":name", $name);
    $statement->bindValue(":email", $email);
@@ -23,8 +23,8 @@ if (isset($_POST['add'])) {
 /* case 2: user did not submit form
 => render form for user to submit */
 else {
-   include 'templates/addauthor.html.php';
+   include 'addauthor.html.php';
 }
 
 $output = ob_get_clean();
-include 'templates/layout.html.php';
+include '../templates/layout.html.php';

@@ -4,8 +4,11 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="jokes.css?version=1">
+   <!-- <link rel="stylesheet" href="style.css?version=1"> -->
    <title><?= $title ?></title>
+   <style>
+      <?= include "style.css";?>
+   </style>
 </head>
 
 <body>
@@ -14,12 +17,12 @@
    </header>
    <nav>
       <ul>
-         <li><a href="index.php">Home</a></li>
-         <li><a href="jokes.php">Joke List</a></li>
-         <li><a href="authors.php">Author List</a></li>
-         <li><a href="addjoke.php">Add New Joke</a></li>
-         <li><a href="addauthor.php">Add New Author</a></li>
-         <li><a href="about.php">About</a></li>
+         <li><a href="../Homepage/index.php">Home</a></li>
+         <li><a href="../List jokes/jokes.php">Joke List</a></li>
+         <li><a href="../List authors/authors.php">Author List</a></li>
+         <li><a href="../add joke/addjoke.php">Add New Joke</a></li>
+         <li><a href="../add author/addauthor.php">Add New Author</a></li>
+         <li><a href="../about/about.php">About</a></li>
       </ul>
    </nav>
    <main>
