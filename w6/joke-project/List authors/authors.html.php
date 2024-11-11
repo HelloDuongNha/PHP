@@ -1,3 +1,7 @@
+<h3>
+   There are <?= $total ?> authors in database
+</h3>
+
 <?php
 foreach ($authors as $author) {
 ?>
@@ -6,7 +10,7 @@ foreach ($authors as $author) {
       ---
       <?= $author['author_email'] ?>
 
-      <a href="editauthor.php?id=<?= $author['author_id'] ?>"
+      <a href="../edit author/editauthor.php?id=<?= $author['author_id'] ?>"
          onclick="return confirm('Do you want to edit this author?');">Edit</a>
 
       <form action="deleteauthor.php" method="post"

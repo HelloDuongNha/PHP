@@ -4,7 +4,7 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="/PHP/w6/joke-project/templates/style.css?version=1">
+   <link rel="stylesheet" href="../templates/style.css?version=4">
    
    <title><?= $title ?></title>
    
