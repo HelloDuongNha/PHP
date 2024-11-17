@@ -1,8 +1,6 @@
 <?php
-$title = "Edit author";
-
-//connect to db
-require '../includes/DatabaseConnection.php';
+include "../includes/Functions.php";
+$title = setTitle("Edit author");
 
 //check whether user submits form or not
 /* case 1: user already submitted form => take
@@ -10,26 +8,14 @@ data through form and add to DB */
 if (isset($_POST['edit'])) {
       $name = $_POST['name'];
       $email = $_POST['email'];
-
-      $sql = "UPDATE authors
-            SET   author_name = :name,
-                  author_email = :email
-            WHERE author_id = :id";
-      $statement = $pdo->prepare($sql);
-      $statement->bindValue(":id", $_POST['id']);
-      $statement->bindValue(":name", $name);
-      $statement->bindValue(":email", $email);
-      $statement->execute();
-      header("location: authors.php");
-}
+      $id = $_POST['id'];
+      updateAuthor($pdo, $id, $name, $email);
+      header("location: ../List authors/authors.php");
+} else {
 /* case 2: user did not submit form
-=> render form for user to submit*/ else {
+=> render form for user to submit*/ 
       //get current data of author to display on form
-      $sql = "SELECT * FROM authors WHERE author_id = :id";
-      $statement = $pdo->prepare($sql);
-      $statement->bindValue(":id", $_GET['id']);
-      $statement->execute();
-      $author = $statement->fetch();
+      $author = getDatabyID($pdo, "authors", "author_id", $_GET["id"]);
       include 'editauthor.html.php';
 }
 

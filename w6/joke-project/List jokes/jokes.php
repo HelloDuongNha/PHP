@@ -1,13 +1,7 @@
 <?php
-$title = "Joke List";
-ob_start();
+include '../includes/Functions.php';
 
-//connect to DB
-include '../includes/DatabaseConnection.php';
-
-// 
-include '../includes/CountAllFunction.php';
-
+$title = setTitle("Joke List");
 //create SQL statement
 $sql = "SELECT *, author_name, author_email, category_name FROM jokes
        INNER JOIN authors

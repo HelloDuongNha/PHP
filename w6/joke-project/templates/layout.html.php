@@ -5,9 +5,9 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="../templates/style.css?version=4">
-   
+
    <title><?= $title ?></title>
-   
+
 
 </head>
 
@@ -15,7 +15,6 @@
    <header>
       <h1>Internet Joke Database</h1>
    </header>
-
    <nav>
       <ul>
          <li><a href="../Homepage/index.php">Home</a></li>

@@ -2,6 +2,7 @@
 $title = "add new joke";
 ob_start();
 include "../includes/DatabaseConnection.php";
+include "../includes/Functions.php";
 
 if (isset($_POST['add_joke'])) {
     $joke_text = $_POST["joke_text"];
