@@ -4,7 +4,8 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="../templates/style.css?version=1">
+   <link rel="stylesheet" href="../templates/admin_style.css">
+
    <title><?= $title ?></title>
 
 
@@ -12,7 +13,7 @@
 
 <body>
    <header>
-      <h1>Internet Joke Database</h1>
+      <h1>Internet Joke Database FOR ADMIN</h1>
    </header>
    <nav>
       <ul>
@@ -23,7 +24,6 @@
          <li><a href="../add author/addauthor.php">Add New Author</a></li>
          <li><a href="../about/about.php">About</a></li>
          <li><a href="../ADMIN/jokes.php">Admin</a></li>
-         <li><a href="../contact/contact.php">Contact us</a></li>
       </ul>
    </nav>
 

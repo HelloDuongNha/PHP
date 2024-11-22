@@ -1,8 +1,9 @@
-<form action="editjoke.php" method="post">
-    <h1>edit new joke</h1>
+<form action="../ADMIN/editjoke.php" method="post">
+    <h2 style="margin-left: 150px;">Edit joke</h2>
+    <br> <br>
     <label>Joke text</label>
     <input type="text" required name="joke_text" placeholder="Enter joke text" value="<?= $joke['joke_text'] ?>">
-    <input type="hidden" name="joke_id" value="<?=$joke['joke_id']?>">
+    <input type="hidden" name="joke_id" value="<?= $joke['joke_id'] ?>">
     <label>Joke author </label>
     <select name="author_id">
         <?php foreach ($authors as $author):

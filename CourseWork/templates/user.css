@@ -1,0 +1,338 @@
+* {
+    margin: 0;
+    /* padding: 0; */
+}
+
+/* Đặt các reset cơ bản */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+:root {
+    --primary-color: #000;
+    --hover-color: #333;
+    --background-color: #000;
+    --text-color: #fff;
+    --aside-color: #000;
+}
+
+/* Layout chính */
+.container {
+    display: flex;
+    /* align-items: center; */
+    justify-items: center;
+    justify-content: center;
+    width: 50vw;
+    /* Chiếm 50% chiều rộng màn hình */
+    margin-left: 25%;
+    /* Chừa chỗ cho aside-left */
+    margin-right: 25%;
+    /* Chừa chỗ cho aside-right */
+    padding-bottom: 50px;
+    /* Chừa chỗ cho footer */
+    
+}
+
+/* Nội dung chính */
+.content {
+    /* left: 25%; */
+    padding-top: 20px;
+    background-color: var(--background-color);
+    
+}
+
+aside,
+.other-user {
+    position: fixed;
+    /* Giữ cố định ở bên trái */
+    top: 0;
+    width: 15%;
+    /* Chiếm 20% chiều rộng màn hình */
+    height: 100vh;
+    /* Chiều cao toàn màn hình */
+    background-color: #f0f0f0;
+    padding-top: 10px;
+    box-sizing: border-box;
+    overflow: auto;
+    /* Nếu nội dung aside nhiều, cho phép cuộn riêng */
+    background-color: var(--aside-color);
+    color: var(--text-color);
+    
+}
+
+/* Sidebar trái */
+.aside-left {
+    left: 10%;
+    border-right: var(--hover-color) solid 1px;
+}
+
+/* Sidebar phải */
+.aside-right {
+    right: 10%;
+    /* border-left: var(--hover-color) solid 1px; */
+}
+
+.account {
+    display: flex;
+    align-items: center;
+    padding-bottom: 40px;
+
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    border-bottom: var(--hover-color) solid 1px;
+}
+
+.logo img {
+    height: 120px;
+    /* Chiều cao 50px */
+    width: 200px;
+    /* Chiều rộng 50px */
+    object-fit: cover;
+    /* Đảm bảo hình không bị méo nếu tỷ lệ không chuẩn */
+}
+
+.menu {
+    padding-top: 40px;
+    padding-left: 0px;
+    
+}
+
+.menu-item,
+.account {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.menu-item img {
+    margin-right: 10px;
+    height: 20px;
+    width: 20px;
+    object-fit: cover;
+}
+
+.menu-item a,
+.account,
+.menu-item span {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.setting {
+    position: absolute;
+    /* Cố định phần tử cuối */
+    bottom: 50px;
+    /* Cách đáy 10px */
+    left: 10px;
+    /* Cách trái 10px */
+}
+
+.account img {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+}
+
+.other-user {
+    padding-left: 10px;
+    border: var(--hover-color) solid 1px;
+    border-radius: 20px;
+    top: 80px;
+}
+
+.other-user h2 {
+    margin: 10px;
+}
+
+
+.post-form,
+.repost-form {
+    border: var(--hover-color) solid 1px;
+    padding-top: 6px;
+    padding: 0 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    margin-bottom: 50px;
+}
+
+.post-header,
+.repost-header {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin: 10px 0 10px 10px
+}
+
+.post-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post-username {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0px 10px 0 0;
+}
+
+.post-tag,
+.post-time {
+    font-weight: italic;
+    margin: 0 10px;
+    color: var(--hover-color);
+    font-size: 14px;
+}
+
+.post-content p,
+.repost-content p {
+    resize: none;
+    margin: 10px;
+}
+
+
+.post-inside {
+    resize: none;
+    max-width: 700px;
+    border: var(--hover-color) solid 1px;
+    border-radius: 20px;
+}
+
+
+.post-content p {
+    font-size: 24px;
+    /* font-weight: bold; */
+    margin-top: 10px;
+}
+
+.post-content img,
+.post-inside>img {
+    /* width: 100%; */
+    width: 700px;
+    border-radius: var(--hover-color) solid 1px;
+    border-radius: 20px 20px 0 0;
+}
+
+.post-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+    height: 50px;
+}
+
+.post-footer a {
+    display: flex;
+    gap: 10px;
+    /* Khoảng cách giữa các biểu tượng */
+    width: 100px;
+    height: 35px;
+    justify-content: center;
+    padding-top: 5px;
+}
+
+.love span:hover {
+    color: red;
+}
+
+.comment span:hover {
+    color: cyan;
+}
+
+.share span:hover {
+    color: red;
+}
+
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--background-color);
+    /* Màu nền trong suốt nhẹ */
+    color: var(--text-color);
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    border-top: var(--hover-color) solid 1px;
+    backdrop-filter: blur(10px);
+    /* Hiệu ứng làm mờ */
+    z-index: 9999;
+    /* Đảm bảo nằm trên các phần tử khác */
+}
+
+/* Container cho thanh tìm kiếm */
+.search-container {
+    position: relative;
+    top: 0;
+    width: 220px;
+    /* Chiều rộng tối đa */
+    margin: 0;
+
+}
+
+/* Style cho ô input */
+.search-container input {
+    width: 100%;/* Chiếm toàn bộ chiều rộng container */
+    padding: 10px 40px 10px 15px;/* Khoảng cách trong */
+    font-size: 16px;
+    border: 1px solid var(--hover-color);
+    border-radius: 20px;
+    outline: none;/* Loại bỏ viền mặc định khi focus */
+    background-color: var(--hover-color);
+    color: var(--text-color);
+    transition: box-shadow 0.3s ease, border 0.3s ease;
+}
+
+
+/* CSS cho Modal */
+.modal {
+    display: none; /* Mặc định modal sẽ ẩn */
+    position: fixed; /* Giữ modal ở vị trí cố định */
+    z-index: 1; /* Đảm bảo modal nằm trên các phần tử khác */
+    left: 0;
+    top: 0;
+    width: 100%; /* Modal chiếm toàn bộ màn hình */
+    height: 100%; /* Modal chiếm toàn bộ chiều cao */
+    background-color: rgba(0,0,0,0.4); /* Màu nền mờ đục */
+    padding-top: 100px; /* Khoảng cách từ trên cùng */
+}
+
+/* Nội dung modal */
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto; /* Đặt modal ở giữa màn hình */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Chiều rộng của modal */
+    max-width: 600px; /* Chiều rộng tối đa */
+    border-radius: 10px; /* Bo góc modal */
+}
+
+/* Dấu "X" để đóng modal */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

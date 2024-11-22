@@ -1,5 +1,6 @@
 <form action="addjoke.php" method="post">
-    <h1>add new joke</h1>
+    <h2 style="margin-left: 150px;">Add new joke</h2>
+    <br> <br>
     <label>Joke text</label>
     <input type="text" required name="joke_text" placeholder="Enter joke text">
     <label>Joke author </label>

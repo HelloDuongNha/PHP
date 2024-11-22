@@ -1,4 +1,7 @@
 <form action="editauthor.php" method="post">
+    <h2 style="margin-left: 150px;">Editing author (id:<?= $author['author_id'] ?>)</h2>
+    <br> <br>
+
     <label for="">Author name</label>
     <input type="text" name="name"
         value="<?= $author['author_name'] ?>" required>
