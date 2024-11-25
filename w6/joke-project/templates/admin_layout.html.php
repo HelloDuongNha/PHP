@@ -24,6 +24,7 @@
          <li><a href="../add author/addauthor.php">Add New Author</a></li>
          <li><a href="../about/about.php">About</a></li>
          <li><a href="../ADMIN/jokes.php">Admin</a></li>
+         <li><a href="../contact/contact.php">Contact us</a></li>
       </ul>
    </nav>
 
